@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOC 2 @ Mindbowser</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
+  <style>
+    :root {
+      --mb-teal: #00a79d;
+      --mb-purple: #7a54a0;
+      --mb-dark: #231f20;
+      --mb-light: #f4f7f6;
+    }
+
+    .reveal {
+      background-color: var(--mb-light);
+      color: var(--mb-dark);
+    }
+
+    .reveal h1,
+    .reveal h2 {
+      color: var(--mb-purple);
+      text-transform: none !important;
+      font-weight: 800;
+    }
+
+    .reveal h3 {
+      color: var(--mb-teal);
+      text-transform: none !important;
+    }
+
+    .highlight-teal {
+      color: var(--mb-teal);
+      font-weight: bold;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      border-bottom: 5px solid var(--mb-teal);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      margin: 10px !important;
+    }
+    
+
+    /* Optimized Grid for 6 cards across full width */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      width: 100%;
+      font-size: 0.36em !important;
+      text-align: left;
+    }
+
+    .practice-item {
+      background: white;
+      padding: 12px;
+      border-radius: 10px;
+      border-top: 4px solid var(--mb-purple);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .practice-item h4 {
+      margin: 0 0 8px 0;
+      font-size: 1.3em;
+      color: var(--mb-teal);
+      font-weight: bold;
+      line-height: 1.1;
+    }
+
+    .practice-item ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .practice-item li {
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 18px;
+      line-height: 1.2;
+      color: #444;
+    }
+
+    /* Single Checkmark Logic */
+    .practice-item li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--mb-teal);
+      font-weight: bold;
+    }
+
+    .training-note {
+      background: linear-gradient(90deg, var(--mb-purple) 0%, #9b7dbd 100%);
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-size: 0.45em;
+      font-weight: 500;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section data-background="linear-gradient(135deg, #f4f7f6 0%, #e0e8e7 100%)">
+        <img src="./logo-colour.png" width="40%" alt="MB" />
+        <h1>SOC 2 Compliance</h1>
+        <p>(System & Organization Controls)</p>
+        <div style="margin-top: 50px; font-size: 0.7em; color: var(--mb-purple); font-weight: 600;">
+          🛡️Shows customers that Mindbowser is trustworthy.
+        </div>
+      </section>
+
+      <section>
+        <h2>What is SOC 2?</h2>
+        <div style="display: flex; justify-content: space-around; gap: 15px; margin-top: 30px;">
+          <div class="card">
+            <h3>🔐</h3>
+            <p><b>Security</b><br><small>Protecting systems & data</small></p>
+          </div>
+          <div class="card">
+            <h3>📂</h3>
+            <p><b>Availability</b><br><small>Systems are reliable</small></p>
+          </div>
+          <div class="card">
+            <h3>🔒</h3>
+            <p><b>Confidentiality</b><br><small>Access is controlled</small></p>
+          </div>
+        </div>
+        <h3 style="margin-top: 50px; font-size: 0.9em;">"Right People, Right Access, Right Controls, Right Evidence"
+        </h3>
+      </section>
+
+      <section>
+        <h2>Why Mindbowser needs SOC 2?</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 0.8em;">
+          <div class="card" style="text-align: left;">🏢 <b>Customer Demand</b><br><small>Required by enterprise &
+              healthcare customers.</small></div>
+          <div class="card" style="text-align: left;">💼 <b>Win Deals </b><br><small>Helps us win deals faster.</small>
+          </div>
+          <div class="card" style="text-align: left;">🔒 <b>Risk Reduction</b><br><small>Reduces security incidents &
+              mistakes.</small></div>
+          <div class="card" style="text-align: left;">📋 <b>Audit Readiness</b><br><small>Makes our processes clear &
+              auditable.</small></div>
+        </div>
+        <h3 style="margin-top: 50px; font-size: 0.9em;"> "SOC 2 is a business enabler, not just compliance"</h3>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom: 15px;">Practices to Follow</h2>
+        <div class="practice-grid">
+          <div class="practice-item">
+            <h4>🔐 Access & Authentication</h4>
+            <ul>
+              <li>Use only your own accounts (no sharing)</li>
+              <li>MFA enabled wherever required</li>
+              <li>Request access only via approved process</li>
+              <li>Do not bypass or disable security controls</li>
+            </ul>
+          </div>
+          <div class="practice-item">
+            <h4>💻 Device & Endpoint Security</h4>
+            <ul>
+              <li>Use company-approved devices only</li>
+              <li>OS & software kept up-to-date</li>
+              <li>Anti-virus enabled at all times</li>
+              <li>Disk encryption enabled</li>
+              <li>Screen lock enabled when away</li>
+              <li>Do not install unapproved software</li>
+            </ul>
+          </div>
+          <div class="practice-item">
+            <h4>📂 Data Handling</h4>
+            <ul>
+              <li>Store work files only in approved systems</li>
+              <li>Do not store company data on personal drives</li>
+              <li>Do not upload company data to unapproved tools</li>
+              <li>Never share credentials, secrets, or tokens</li>
+            </ul>
+          </div>
+          <div class="practice-item">
+            <h4>👩‍💻 Engineering</h4>
+            <ul>
+              <li>Code reviews are mandatory</li>
+              <li>No direct production changes</li>
+              <li>Follow change & deployment process</li>
+              <li>Secure handling of secrets & credentials</li>
+            </ul>
+          </div>
+          <div class="practice-item">
+            <h4>🚨 Incident Reporting</h4>
+          
+            <ul>
+              <li>Phishing or suspicious emails</li>
+              <li>Unusual access or behavior</li>
+              <li>Accidental data sharing</li>
+              <li>Lost or stolen device</li>
+            </ul>
+          </div>
+          <div class="practice-item">
+            <h4>📜 Policies & Training</h4>
+            <ul>
+              <li>Read & acknowledge required policies</li>
+              <li>Complete assigned security trainings on time</li>
+              <li>Follow Acceptable Use & Security policies</li>
+              <li>Cooperate during audits or reviews</li>
+            </ul>
+          </div>
+        </div>
+        <div class="training-note">
+          💡 <b>More support is on the way!</b> Detailed guidelines will be shared to help you follow these practices
+          correctly.
+        </div>
+      </section>
+
+      <section>
+        <h2 style="margin-bottom: 30px;">Your Part in SOC 2</h2>
+      
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 85%; margin: 0 auto;">
+      
+          <div class="card"
+            style="text-align: left; border-left: 8px solid var(--mb-purple); margin: 0 !important; padding: 20px;">
+            <p style="font-size: 0.7em; margin: 0;">✅ <b>Policies</b></p>
+            <p style="font-size: 0.5em; margin: 10px 0 0 0; color: #555;">Acknowledge all required documents on the portal.
+            </p>
+          </div>
+      
+          <div class="card"
+            style="text-align: left; border-left: 8px solid var(--mb-teal); margin: 0 !important; padding: 20px;">
+            <p style="font-size: 0.7em; margin: 0;">🎓 <b>Trainings</b></p>
+            <p style="font-size: 0.5em; margin: 10px 0 0 0; color: #555;">Complete assigned security awareness modules.</p>
+          </div>
+      
+          <div class="card"
+            style="text-align: left; border-left: 8px solid var(--mb-teal); margin: 0 !important; padding: 20px;">
+            <p style="font-size: 0.7em; margin: 0;">💻 <b>Device Health</b></p>
+            <p style="font-size: 0.5em; margin: 10px 0 0 0; color: #555;">Ensure your devices shows "Compliant" status.
+            </p>
+          </div>
+      
+          <div class="card"
+            style="text-align: left; border-left: 8px solid var(--mb-purple); margin: 0 !important; padding: 20px;">
+            <p style="font-size: 0.7em; margin: 0;">🔐 <b>Account Security</b></p>
+            <p style="font-size: 0.5em; margin: 10px 0 0 0; color: #555;">Protect your account by following security best practices.
+            </p>
+          </div>
+      
+        </div>
+      
+        <h3 style="margin-top: 40px; font-size: 0.85em; color: var(--mb-teal);">
+          "These are mandatory for SOC 2 compliance"
+        </h3>
+      </section>
+
+      <section>
+        <h2>Device Management</h2>
+        <p style="font-size: 0.6em; margin-bottom: 30px;">Current checks automated by fleet MDM:</p>
+        <div style="display: flex; justify-content: center; gap: 15px; font-size: 0.5em;">
+          <div class="card">🛡️ Anti-virus Enabled</div>
+          <div class="card">🔄 OS up-to-date</div>
+          <div class="card">🖥️ Auto Screen Lock</div>
+          <div class="card">🔑 Disk Encryption</div>
+        </div>
+        <div
+        class="training-note"
+         >
+        💡Additional controls will be implemented in the next phase, with prior communication.
+        </div>
+      </section>
+
+      <section data-background="var(--mb-purple)">
+        <h2 style="color: white; margin-bottom: 30px;">SOC 2 is a Shared Responsibility</h2>
+      
+        <div class="card"
+          style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-bottom: none; box-shadow: none;">
+          <ul style="list-style: none; margin: 0; padding: 0; color: white; font-size: 0.8em; line-height: 1.6;">
+            <li style="margin-bottom: 15px;">🤝 <b>Everyone plays a role.</b></li>
+            <li style="margin-bottom: 15px;">🛡️ <b>Small, consistent actions</b> create strong trust.</li>
+            <li style="margin-bottom: 15px;">🚀 <b>Strong security</b> enables faster business growth.</li>
+            <li>💎 <b>Customer trust</b> is the foundation of our success.</li>
+          </ul>
+        </div>
+      
+        <div style="margin-top: 40px;">
+          <p style="
+                    color: white; 
+                    font-weight: 900; 
+                    font-size: 1.8em; 
+                    text-transform: uppercase; 
+                    letter-spacing: 3px;
+                    text-shadow: 3px 3px 0px var(--mb-teal), 6px 6px 0px rgba(0,0,0,0.2);
+                    margin: 0;
+                  ">
+            Thank You!
+          </p>
+          <div style="height: 4px; width: 100px; background: var(--mb-teal); margin: 10px auto; border-radius: 2px;"></div></div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      center: true,
+      transition: 'slide'
+    });
+  </script>
+</body>
+
+</html>
